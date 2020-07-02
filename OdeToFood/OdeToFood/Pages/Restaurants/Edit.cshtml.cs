@@ -19,7 +19,6 @@ namespace OdeToFood.Pages.Restaurants
         public EditModel(IRestaurantData restaurantData, IHtmlHelper htmlHelper)
         {
             this._restaurantData = restaurantData;
-            _htmlHelper = htmlHelper;
             this._htmlHelper = htmlHelper;
         }
         public IActionResult OnGet(int? restaurantId)
@@ -60,6 +59,7 @@ namespace OdeToFood.Pages.Restaurants
                 this._restaurantData.Add(Restaurant);
             }
             this._restaurantData.Commit();
+            TempData["Message"] = "Restaurant saved!";
             return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id });
         }
     }

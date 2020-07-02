@@ -59,7 +59,7 @@ namespace OdeToFood.Data
             {
                 restaurant.Name = updatedRestaurant.Name;
                 restaurant.Location = updatedRestaurant.Location;
-                restaurant.Cuisine = restaurant.Cuisine;
+                restaurant.Cuisine = updatedRestaurant.Cuisine;
             }
 
             return restaurant;
