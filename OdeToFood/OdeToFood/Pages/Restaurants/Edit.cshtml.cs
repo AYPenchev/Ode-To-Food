@@ -45,15 +45,22 @@ namespace OdeToFood.Pages.Restaurants
 
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                Cuisines = this._htmlHelper.GetEnumSelectList<CuisineType>();
+                return Page();
+            }
+
+            if (Restaurant.Id > 0)
             {
                 this._restaurantData.Update(Restaurant);
-                this._restaurantData.Commit();
-                return RedirectToPage("./Detail", new {restaurantId = Restaurant.Id});
             }
-            Cuisines = this._htmlHelper.GetEnumSelectList<CuisineType>();
-
-            return Page();
+            else
+            {
+                this._restaurantData.Add(Restaurant);
+            }
+            this._restaurantData.Commit();
+            return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id });
         }
     }
 }
