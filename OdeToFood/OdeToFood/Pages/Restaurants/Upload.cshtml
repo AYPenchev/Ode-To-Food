@@ -1,0 +1,12 @@
+﻿@page
+@model OdeToFood.Pages.Restaurants.UploadModel
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<h2>Upload</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" asp-for="Upload" />
+    <input type="submit" />
+</form>
