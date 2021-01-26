@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - OdeToFood</title>
+    <title>@ViewData["Title"] - Hotelo Bulgaria</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,14 +26,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">OdeToFood</a>
+                <a asp-page="/Index" class="navbar-brand">Hotelo Bulgaria</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/Restaurants/List">Resturants</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a asp-page="/Index">Начална страница</a></li>
+                    <li><a asp-page="/Restaurants/List">Избери хотел</a></li>
+                    <li><a asp-page="/About">За нас</a></li>
+                    <li><a asp-page="/Contact">Контакти</a></li>
                 </ul>
             </div>
         </div>
@@ -47,8 +47,8 @@
         <footer>
             <vc:restaurant-count></vc:restaurant-count>
             @RenderSection("footer", required: false)
-            <p>&copy; 2020 - OdeToFood - Asen Penchev</p>
-            <img src="/food.png" />
+            <p>&copy; 2020 - Hotelo Bulgaria - Asen Penchev</p>
+            <img src="/hotel.png" />
         </footer>
     </div>
 
